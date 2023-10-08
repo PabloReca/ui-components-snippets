@@ -1,0 +1,71 @@
+.accordion > * {
+    width: 20rem !important;
+}
+
+.accordion-header {
+    background-color: #d9d9d9;
+    color: black;
+    cursor: pointer;
+    padding: 20px;
+    width: 30em;
+    border: none;
+    text-align: left;
+    outline: none;
+    border-bottom: 2px solid transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.accordion-header.active, .accordion-header:hover {
+    background-color: #b4b4b4;
+}
+
+.accordion-body {
+    padding: 0 20px;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease-out;
+    background-color: #d9d9d9;
+
+}
+
+article {
+    margin-bottom: 2rem;
+}
+
+
+.accordion-icon svg {
+    transition: transform 0.3s ease-out;
+    transform: rotate(45deg); /* Rotación inicial de 45 grados */
+    transform-origin: center; /* Asegurarse de que el SVG rote alrededor de su centro */
+    display: inline-block; /* Esto puede ayudar a manejar el espaciado alrededor del SVG */
+    margin: -2px; /* Ajusta según sea necesario para alinear el SVG correctamente */
+}
+
+.accordion-header.active .accordion-icon svg {
+    transform: rotate(-45deg); /* Cuando se activa, rota -45 grados */
+}
+
+h5 {
+    font-size: 1rem;
+    font-weight: normal;
+    margin-block: 0;
+}
+
+
+.accordion-body {
+    padding: 0 20px;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease-out, border-top 0.3s ease-out;
+    background-color: #d9d9d9;
+}
+
+.accordion-body.open {
+    border-top: 2px solid black;
+}
+
+.accordion-body:not(.open) {
+    border-top: 2px solid transparent;
+}
